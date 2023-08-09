@@ -1,0 +1,12 @@
+syntax = "proto3";
+package belkyc.test;
+
+import "gogoproto/gogo.proto";
+import "belkyc/test/params.proto";
+
+option go_package = "belkyc/x/test/types";
+
+// GenesisState defines the test module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
